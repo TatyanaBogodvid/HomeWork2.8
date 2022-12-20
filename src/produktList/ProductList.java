@@ -7,7 +7,7 @@ public class ProductList {
     private Set <Product> products;
 
     public ProductList(Set<Product> products) {
-        this.products = this.products;
+        this.products = products;
     }
 
     public Set<Product> getProducts() {
@@ -29,9 +29,7 @@ public class ProductList {
 
     @Override
     public String toString() {
-        return "ProductList{" +
-                "products=" + products +
-                '}';
+        return products.toString();
     }
 
     @Override

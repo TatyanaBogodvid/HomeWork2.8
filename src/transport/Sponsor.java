@@ -1,5 +1,7 @@
 package transport;
 
+import java.util.Objects;
+
 import static transport.Transport.isNullOrEmpty;
 
 public class Sponsor {
@@ -29,5 +31,18 @@ public class Sponsor {
 
     public void toSposorRace(){
         System.out.println("Спонсор " + getName() + " проспонсировал заезд на " + getAmount());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sponsor sponsor = (Sponsor) o;
+        return amount == sponsor.amount && Objects.equals(name, sponsor.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, amount);
     }
 }

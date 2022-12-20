@@ -57,4 +57,11 @@ public class Recipe {
     public int hashCode() {
         return Objects.hash(name);
     }
+
+    @Override
+    public String toString() {
+        return "Руцепт " + name + '\n' +
+                "Список продуктов: " + productList + '\n' +
+                "Стоимость: " + totalCost;
+    }
 }

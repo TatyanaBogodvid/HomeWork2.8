@@ -24,8 +24,30 @@ public class Main {
         products.add(onion);
 
         ProductList list = new ProductList(products);
-
         System.out.println(list);
+        System.out.println("");
+        list.add(new Product("шоколад", 65.8, 1.2));
+        System.out.println(list);
+        System.out.println("");
+        list.remove(potato);
+        System.out.println(list);
+        System.out.println("");
+        /*list.add(banan);
+        System.out.println(list);
+        list.remove(potato);
+        System.out.println("");
+        System.out.println(list);*/
+
+        Set<Product> productsForRecipe = new HashSet<>();
+        productsForRecipe.add(potato);
+        productsForRecipe.add(carrots);
+        productsForRecipe.add(meat);
+        productsForRecipe.add(onion);
+        ProductList listForRecipe = new ProductList(productsForRecipe);
+
+        Recipe recipe = new Recipe("Жаркое", listForRecipe, 248);
+        System.out.println(recipe);
+
 
     }
 }

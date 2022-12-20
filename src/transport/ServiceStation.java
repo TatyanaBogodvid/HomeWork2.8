@@ -1,6 +1,7 @@
 package transport;
 
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.Queue;
 
 public class ServiceStation {
@@ -25,5 +26,18 @@ public class ServiceStation {
                 transport.repair();
             }
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ServiceStation that = (ServiceStation) o;
+        return Objects.equals(transports, that.transports);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(transports);
     }
 }

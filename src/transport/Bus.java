@@ -41,7 +41,10 @@ public class Bus extends Transport implements Competing, com.sun.jdi.connect.Tra
 
     @Override
     public void repair() {
+
         System.out.println("Автобус " + getBrand() + " " + getModel() + " отремонтирована!");
     }
+
+
 }
 
